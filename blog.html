@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog THD09 Affiliates - Actualités et conseils de paris</title>
+    <meta name="description" content="Restez informé des dernières actualités du monde des paris en ligne et découvrez nos conseils d'experts sur le blog THD09 Affiliates.">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="logo">THD09 Affiliates</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="partners.html">Partners</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main role="main" class="container">
+            <h1>THD09 Affiliate Program Blog</h1>
+            <p>Stay informed with the latest news, tips, and insights about online betting and our partner platforms. Our regularly updated blog covers a wide range of topics to help you make the most of your betting experience.</p>
+
+            <div class="blog-grid">
+                <div class="blog-card" v-for="post in blogPosts" :key="post.id">
+                    <div class="blog-content">
+                        <h2 class="blog-title">{{ post.title }}</h2>
+                        <p>{{ post.excerpt }}</p>
+                        <p>{{ post.date }} | {{ post.author }}</p>
+                        <a :href="post.link" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                © 2024 THD09 Affiliate Program. All rights reserved.
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
